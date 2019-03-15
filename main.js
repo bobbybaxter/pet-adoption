@@ -220,15 +220,13 @@ const buildCards = (array) => {
   let domString = '';
   array.forEach((arrayItem) => {
   domString += `<div class="card">`;
-  domString +=   `<header>`;
-  domString +=     `<h3>${arrayItem.name}</h3>`;
-  domString +=   `</header>`;
-  domString +=   `<img src=${arrayItem.imageUrl} />`;
+  domString +=   `<h3 class="card-title">${arrayItem.name}</h3>`;
+  domString +=   `<div class="square-img">`;
+  domString +=     `<img src=${arrayItem.imageUrl} />`;
+  domString +=   `</div>`;
   domString +=   `<p>${arrayItem.color}</p>`;
-  domString +=   `<p>${arrayItem.specialSkill}</p>`;
-  domString +=   `<footer>`;
-  domString +=     `<h4>${arrayItem.type}</h4>`;
-  domString +=   `</footer>`;
+  domString +=   `<p class="card-skill">${arrayItem.specialSkill}</p>`;
+  domString +=   `<h4 class="card-footer ${arrayItem.type}">${arrayItem.type}</h4>`;
   domString += `</div>`;
   });
   printToDom('card-container', domString);

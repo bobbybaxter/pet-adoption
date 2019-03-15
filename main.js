@@ -212,16 +212,55 @@ const pets = [
 ];
 
 const printToDom = (divId, textToPrint) => {
-  const selectedDiv = document.getElementById(divId, textToPrint);
+  const selectedDiv = document.getElementById(divId);
   selectedDiv.innerHTML = textToPrint;
 };
 
-const buildCards = () => {
-
+const buildCards = (array) => {
+  let domString = '';
+  array.forEach((arrayItem) => {
+  domString += `<div class="card">`;
+  domString +=   `<header>`;
+  domString +=     `<h3>${arrayItem.name}</h3>`;
+  domString +=   `</header>`;
+  domString +=   `<img src=${arrayItem.imageUrl} />`;
+  domString +=   `<p>${arrayItem.color}</p>`;
+  domString +=   `<p>${arrayItem.specialSkill}</p>`;
+  domString +=   `<footer>`;
+  domString +=     `<h4>${arrayItem.type}</h4>`;
+  domString +=   `</footer>`;
+  domString += `</div>`;
+  });
+  printToDom('card-container', domString);
 };
 
-const init () => {
-  buildCards();
+const buttonClick = (e) => {
+  const buttonId = e.target.id;
+  const selectedCards = [];
+
+  pets.forEach((pet) => {
+    if (pet.type === buttonId) {
+      selectedCards.push(pet);
+    }
+  });
+
+  if (buttonId === 'all') {
+    buildCards(pets);
+  } else {
+    buildCards(selectedCards);
+  }
+}
+
+const buttonEvents = () => {
+  document.getElementById('all').addEventListener('click', buttonClick);
+  document.getElementById('cat').addEventListener('click', buttonClick);
+  document.getElementById('dog').addEventListener('click', buttonClick);
+  document.getElementById('dino').addEventListener('click', buttonClick);
+}
+
+const init = () => {
+  buttonEvents();
+  buildCards(pets);
 };
 
 init();

@@ -4,7 +4,7 @@ One-page locally hosted site to practice arrays and buttons in Javascript.
 Using a loop in Javascript, I've created cards for the pets within the array.  When clicked, the buttons will only display the cards of the pets with the corresponding pet type.
 
 ## Screenshots
-![image of pet adoption website]()
+![image of pet adoption website](https://raw.githubusercontent.com/bobbybaxter/pet-adoption/master/img/pet-adoption-screenshot.png)
 
 ## Getting Started
 Clone the repo:

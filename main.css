@@ -1,3 +1,119 @@
 body {
-  background-color: lightblue;
+  margin: 0;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#button-bar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+button {
+  background: #EEEEEE;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  color: rgb(154, 154, 154);
+  font-family: Open Sans;
+  font-size: 40px;
+  font-weight: 100;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 1px 1px 10px 0px #838282;
+  -webkit-box-shadow: 1px 1px 10px 0px #838282;
+  -moz-box-shadow: 1px 1px 10px 0px #838282;
+  /* text-shadow: 1px 1px 1px #838282; */
+  border: solid rgb(224, 224, 224) 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button#cat {
+  background-color: rgb(216,238,245);
+  color: rgb(51,119,189);
+}
+
+button#dog {
+  background-color: rgb(221,240,220);
+  color: rgb(51, 143, 83);
+}
+
+button#dino {
+  background-color: rgb(253,248,231);
+  color: rgb(255,185,116);
+}
+
+#card-container {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin: 5px;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  max-width: 250px;
+  border: 2px solid rgb(224, 224, 224);
+  margin: 10px;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.card-title {
+  background-color: #EEEEEE;
+  margin: 0;
+  padding: 10px;
+  color: rgb(154, 154, 154);
+}
+
+.card-skill {
+  height: 60px;
+}
+
+.card-footer {
+  margin: 0;
+  padding: 10px;
+}
+
+.cat {
+  background-color: rgb(216,238,245);
+  color: rgb(51,119,189);
+}
+
+.dog {
+  background-color: rgb(221,240,220);
+  color: rgb(51, 143, 83);
+}
+
+.dino {
+  background-color: rgb(253,248,231);
+  color: rgb(255,185,116);
+}
+
+.square-img {
+  width: 200px;
+  height: 200px;
+  margin: 10px auto 5px auto;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+p {
+  margin: 2px;
 }
